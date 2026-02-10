@@ -1,11 +1,11 @@
 #project for simple AI agent using openAI api
 # langchain is a framework for building AI agents that can interact with various tools and APIs. 
 # In this example, we will create a simple agent that can answer questions using the OpenAI API.
-from langchain_core.messages import HumanMessage
-from langchain_openai import ChatOpenAI
+from langchain.schema import HumanMessage
+from langchain.chat_models import ChatOpenAI
 from langchain.tools import tool
 # langgraph is a library that provides prebuilt agents and tools for building AI applications.
-from langgraph.prebuilt import creat_react_agent
+from langgraph.prebuilt import create_react_agent
 # dotenv module is used to load environment variables from a .env file. This is useful for keeping sensitive information like API keys out of your code.
 from dotenv import load_dotenv
 
@@ -19,8 +19,8 @@ def main():
     #below array of tools will hold list of tools that the agent can use to answer questions.
     tools = []
 
-    # creates agent that will use the above defined model and tools to answer questions automatically. The creat_react_agent function is a helper function that sets up the agent with the specified model and tools, allowing it to interact with them to generate responses.
-    agent_executor = creat_react_agent(model, tools)
+    # creates agent that will use the above defined model and tools to answer questions automatically. The create_react_agent function is a helper function that sets up the agent with the specified model and tools, allowing it to interact with them to generate responses.
+    agent_executor = create_react_agent(model, tools)
 
     print("Hello! I am a simple AI agent. Ask me anything!")
     print("Type 'exit' to quit.")
