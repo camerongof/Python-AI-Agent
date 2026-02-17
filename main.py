@@ -1,7 +1,7 @@
 #project for simple AI agent using openAI api
 # langchain is a framework for building AI agents that can interact with various tools and APIs. 
 # In this example, we will create a simple agent that can answer questions using the OpenAI API.
-from langchain.schema import HumanMessage
+from langchain.messages import HumanMessage  
 from langchain.chat_models import ChatOpenAI
 from langchain.tools import tool
 # langgraph is a library that provides prebuilt agents and tools for building AI applications.
